@@ -1,0 +1,4 @@
+https://www.postgresql.org/docs/manuals/
+https://www.tutorialspoint.com/postgresql/
+https://www.pgadmin.org/docs/
+https://www.entityframeworktutorial.net/entity-relationships.aspx
