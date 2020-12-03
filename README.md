@@ -19,17 +19,23 @@ The goal of this project is to prepare for the upcoming surge in eligible retire
            ON e.emp_no = l.emp_no 
            WHERE (e.birth_date BETWEEN '1952-01-01' AND '1955-12-31')
            ORDER BY e.emp_no ;    
+
+* A query to create a Unique Titles table that contains the employee number, first and last name, and most recent title.
+
       SELECT DISTINCT ON (emp_no) emp_no, first_name, Last_name, title
            INTO unique_titles
            FROM retirement_titles
            ORDER BY emp_no, to_date DESC;
+           
+* A query to create a Retiring Titles table that contains the number of titles filled by employees who are retiring. (10 pt)
+
       SELECT COUNT (u.emp_no), u.title
            INTO retiring_titles
            FROM unique_titles as u
            GROUP BY u.title 
            ORDER by count DESC
 
-* A query to create a Unique Titles table that contains the employee number, first and last name, and most recent title.
+
 
 ## Results 
 The following represent major findings from our personnel analysis:
