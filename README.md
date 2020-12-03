@@ -71,7 +71,7 @@ The goal of this project is to prepare for the upcoming surge in eligible retire
       DROP TABLE tempe ;
       DROP TABLE tempi ;
       
-![Mentorship_Eligibility](/Data/mentorship_eligibility.png).
+![Mentorship_Eligibility](/Data/mentorship_eligibilty.png).
 
 ## Results 
 The following represent major findings from our personnel analysis:
