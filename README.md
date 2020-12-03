@@ -10,7 +10,27 @@ The goal of this project is to prepare for the upcoming surge in eligible retire
 ## Queries
 * A query to create a Retirement Titles table for employees who are born between January 1, 1952 and December 31, 1955. 
 
-![Ride_Share_Data_Summary](/Resources/Ride_Share_Data_Summary.png).
+-- Employee_Database_challenge
+SELECT e.emp_no, e.first_name, e.last_name, l.title, l.from_date, l.to_date 
+   INTO retirement_titles
+   FROM employees as e
+   LEFT JOIN titles as l
+   ON e.emp_no = l.emp_no 
+   WHERE (e.birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+   ORDER BY e.emp_no ;
+
+-- Use Dictinct with Orderby to remove duplicate rows
+SELECT DISTINCT ON (emp_no) emp_no, first_name, Last_name, title
+   INTO unique_titles
+   FROM retirement_titles
+   ORDER BY emp_no, to_date DESC;
+
+-- Retiree count by title
+SELECT COUNT (u.emp_no), u.title
+   INTO retiring_titles
+   FROM unique_titles as u
+   GROUP BY u.title 
+   ORDER by count DESC
 
 ## Results 
 The following represent major findings from our personnel analysis:
