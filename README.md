@@ -29,6 +29,8 @@ The goal of this project is to prepare for the upcoming surge in eligible retire
            FROM retirement_titles
            ORDER BY emp_no, to_date DESC;
            
+![Unique Titles](/Data/unique_titles.png).
+
 * A query to create a Retiring Titles table that contains the number of titles filled by employees who are retiring. (10 pt)
 
       SELECT COUNT (u.emp_no), u.title
@@ -36,6 +38,8 @@ The goal of this project is to prepare for the upcoming surge in eligible retire
            FROM unique_titles as u
            GROUP BY u.title 
            ORDER by count DESC
+
+![Retiring Titles](/Data/retiring_titles.png).
 
 * A query to create a Mentorship Eligibility table for current employees who were born between January 1, 1965 and December 31, 1965.
 
@@ -67,6 +71,8 @@ The goal of this project is to prepare for the upcoming surge in eligible retire
       DROP TABLE tempe ;
       DROP TABLE tempi ;
       
+![Mentorship Eligibility](/Data/mentorship_eligibility.png).      
+
 ## Results 
 The following represent major findings from our personnel analysis:
 
