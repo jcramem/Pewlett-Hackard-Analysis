@@ -7,6 +7,9 @@ The goal of this project is to prepare for the upcoming surge in eligible retire
 * Data Sources: employees.csv, dept_emp.csv, titles.csv
 * Software: PostgreSQL 11.1, pgAdmin 4
 
+## Queries
+* 
+
 ## Results 
 The following represent major findings from our personnel analysis:
 
