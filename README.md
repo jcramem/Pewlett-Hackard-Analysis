@@ -20,6 +20,8 @@ The goal of this project is to prepare for the upcoming surge in eligible retire
            WHERE (e.birth_date BETWEEN '1952-01-01' AND '1955-12-31')
            ORDER BY e.emp_no ;    
 
+![Retirement Titles](/Data/retirement_titles.png).
+
 * A query to create a Unique Titles table that contains the employee number, first and last name, and most recent title.
 
       SELECT DISTINCT ON (emp_no) emp_no, first_name, Last_name, title
