@@ -8,7 +8,8 @@ The goal of this project is to prepare for the upcoming surge in eligible retire
 * Software: PostgreSQL 11.1, pgAdmin 4
 
 ## Queries
-* All queries are included in the file 
+* All queries are included in the file *Employee_Database_challenge.sql* program in the *Resources* folder. 
+
 * A query to create a Retirement Titles table for employees who are born between January 1, 1952 and December 31, 1955.  
  
       SELECT e.emp_no, e.first_name, e.last_name, l.title, l.from_date, l.to_date
