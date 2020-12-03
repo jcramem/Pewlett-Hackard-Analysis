@@ -8,7 +8,9 @@ The goal of this project is to prepare for the upcoming surge in eligible retire
 * Software: PostgreSQL 11.1, pgAdmin 4
 
 ## Queries
-* 
+* A query to create a Retirement Titles table for employees who are born between January 1, 1952 and December 31, 1955. 
+
+![Ride_Share_Data_Summary](/Resources/Ride_Share_Data_Summary.png).
 
 ## Results 
 The following represent major findings from our personnel analysis:
