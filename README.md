@@ -35,8 +35,36 @@ The goal of this project is to prepare for the upcoming surge in eligible retire
            GROUP BY u.title 
            ORDER by count DESC
 
+* A query to create a Mentorship Eligibility table for current employees who were born between January 1, 1965 and December 31, 1965.
 
+      SELECT e.emp_no, e.first_name, e.last_name, e.birth_date
+           INTO tempe
+           FROM employees as e ;
 
+      SELECT DISTINCT ON (d.emp_no) d.emp_no, d.from_date, d.to_date 
+           INTO tempd
+           FROM dept_emp as d   
+           ORDER BY emp_no, to_date DESC;
+
+      SELECT DISTINCT ON (i.emp_no) i.emp_no, i.title
+           INTO tempi
+           FROM titles as i
+           ORDER BY emp_no, to_date DESC; 
+
+      SELECT e.emp_no, e.first_name, e.last_name, e.birth_date, d.from_date, d.to_date, i.title 
+           INTO mentorship_eligibilty
+           FROM tempe as e 
+           LEFT JOIN tempd as d 
+           ON e.emp_no = d. emp_no 
+           LEFT JOIN tempi as i
+           ON e.emp_no = i. emp_no 
+           WHERE (birth_date BETWEEN '1965-01-01' AND '1965-12-31')   
+           ORDER BY emp_no ;
+
+      DROP TABLE tempd ;
+      DROP TABLE tempe ;
+      DROP TABLE tempi ;
+      
 ## Results 
 The following represent major findings from our personnel analysis:
 
